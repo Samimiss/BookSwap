@@ -1,29 +1,144 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>BookSwap</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookSwap - Céu Estrelado</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <div id="nome-logo"> BookSwap </div>
-            
-            <h1>
-            BookSwap
-             </h1>
-        <nav>
-            <ul>
-                <li><a href="#"> Início </a> </li>
-                <li><a href="#"> Livros </a></li>
-                <li><a href="#"> Ajuda </a></li>
-                <li><a href="#"> Conta </a></li>
-            </ul>
-        </nav>
-    </header>
+
+  <div class="stars-container">
+    <div class="star star-sm" style="top: 10%; left: 15%; animation-delay: 0s;"></div>
+    <div class="star star-md" style="top: 15%; left: 35%; animation-delay: 1.2s;"></div>
+    <div class="star star-lg" style="top: 8%; left: 65%; animation-delay: 0.5s;"></div>
+    <div class="star star-sm" style="top: 22%; left: 82%; animation-delay: 2.1s;"></div>
+    <div class="star star-md" style="top: 28%; left: 10%; animation-delay: 0.8s;"></div>
+    
+    <div class="star star-lg" style="top: 40%; left: 22%; animation-delay: 1.5s;"></div>
+    <div class="star star-sm" style="top: 45%; left: 50%; animation-delay: 2.7s;"></div>
+    <div class="star star-md" style="top: 38%; left: 78%; animation-delay: 0.3s;"></div>
+    
+    <svg class="star-cross" style="top: 18%; left: 88%; animation-delay: 0.4s;" width="16" height="16" viewBox="0 0 24 24" fill="#bfdbfe"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+    <svg class="star-cross" style="top: 65%; left: 82%; animation-delay: 1.8s;" width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 9.41L12 0Z"/></svg>
+  </div>
+
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-text">BookSwap</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#">Início</a>
+      <a href="#livros">Livros</a>
+      <a href="#">Ajuda</a>
+      <a href="#">Conta</a>
+    </nav>
+  </header>
+
+  <main class="main-wrapper">
+    
+    <section class="hero-container">
+      <div class="cat-decoration cat-left">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#bfdbfe" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58 1.58 3.82.25 5.87C21.6 10.3 22 12.08 22 14c0 4.97-4.48 9-10 9s-10-4.03-10-9c0-1.92.4-3.7 1.33-5.13C2 6.82 2.18 3.58 3.58 3c1.39-.58 4.64.26 6.42 2.26.65-.17 1.33-.26 2-.26z"/>
+          <circle cx="9" cy="13" r="1" fill="#bfdbfe"/>
+          <circle cx="15" cy="13" r="1" fill="#bfdbfe"/>
+          <path d="M10 16c.5.5 1.5 1 2 1s1.5-.5 2-.5"/>
+          <path d="M2 13h4M18 13h4"/>
+        </svg>
+      </div>
+
+      <div class="hero-content">
+        <h1 class="sparkle-title">
+          Troque livros, multiplique<br>
+          histórias
+        </h1>
+        
+        <p class="hero-description">
+          Conecte leitores para trocar livros de forma simples, gratuita e sustentável.
+        </p>
+
+        <a href="#livros" class="cta-button">
+          Ver livros disponíveis
+        </a>
+      </div>
+
+      <div class="cat-decoration cat-right">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#bfdbfe" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58 1.58 3.82.25 5.87C21.6 10.3 22 12.08 22 14c0 4.97-4.48 9-10 9s-10-4.03-10-9c0-1.92.4-3.7 1.33-5.13C2 6.82 2.18 3.58 3.58 3c1.39-.58 4.64.26 6.42 2.26.65-.17 1.33-.26 2-.26z"/>
+          <circle cx="9" cy="13" r="1" fill="#bfdbfe"/>
+          <circle cx="15" cy="13" r="1" fill="#bfdbfe"/>
+          <path d="M10 16c.5.5 1.5 1 2 1s1.5-.5 2-.5"/>
+          <path d="M2 13h4M18 13h4"/>
+        </svg>
+      </div>
+    </section>
+
+    <section id="livros" class="catalog-section">
+      <h2 class="section-title">Livros Disponíveis para Troca</h2>
+
+      <div class="books-grid">
+        
+        <article class="book-card">
+          <div class="book-cover">
+            <img src="imgpeq/Captura de tela 2026-08-03 205423.png" alt="Capa do Livro">
+          </div>
+          <div class="book-info">
+            <h3 class="book-title">O Pequeno Príncipe</h3>
+            <p class="book-author">Antoine de Saint-Exupéry</p>
+
+            <div class="book-meta">
+              <span class="badge">Semiautografado</span>
+              <span class="badge">Ótimo estado</span>
+            </div>
+
+            <button class="swap-button">Trocar</button>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <div class="book-cover">
+            <img src="imgmeta/Captura de tela 2026-08-03 205144.png" alt="Capa do Livro">
+          </div>
+          <div class="book-info">
+            <h3 class="book-title">A Metamorfose</h3>
+            <p class="book-author">Franz Kafka</p>
+
+            <div class="book-meta">
+              <span class="badge">Capa Dura</span>
+              <span class="badge">Novo</span>
+            </div>
+
+            <button class="swap-button"> Trocar</button>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <div class="book-cover">
+            <img src="imgorg/Captura de tela 2026-08-03 205051.png" alt="Capa do Livro">
+          </div>
+          <div class="book-info">
+            <h3 class="book-title">Orgulho e Preconceito</h3>
+            <p class="book-author">Jane Austen</p>
+
+            <div class="book-meta">
+              <span class="badge">Edição Especial</span>
+              <span class="badge">Usado</span>
+            </div>
+
+            <button class="swap-button">Trocar</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
 
 </body>
 </html>

@@ -1,25 +1,324 @@
-*{
-    margin: 0;
+/* ==========================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header{
-   
-     background-color: rgb(0, 0, 0) ;
-     height: 150px;
-     width: 100%;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     color: rgb(245, 84, 183);
-     font-size: 20px;
+body {
+  font-family: 'Quicksand', sans-serif;
+  /* Gradiente em tons de azul escuro e aconchegante */
+  background: linear-gradient(135deg, #0b1d3a 0%, #1a365d 50%, #0f172a 100%);
+  color: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
 }
 
-ul{
-    display: flex;
-    gap: 100px;
+/* ==========================================
+   Navegação (Header)
+   ========================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 5%;
+  width: 100%;
 }
 
-#nome-logo {
+.logo-text {
+  font-family: 'Fredoka', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
 
-    
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #93c5fd;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(147, 197, 253, 0.6);
+}
+
+/* ==========================================
+   Seção Principal (Hero)
+   ========================================== */
+.hero-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem 10%;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  z-index: 2;
+}
+
+/* Título com Fonte Fofa e Efeito Cintilante */
+.sparkle-title {
+  font-family: 'Fredoka', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  
+  /* Gradiente de luz no texto */
+  background: linear-gradient(90deg, #e0f2fe, #bfdbfe, #ddd6fe, #e0f2fe);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Animação cintilante */
+  animation: shine 4s linear infinite;
+  
+  /* Brilho suave ao redor da fonte */
+  filter: drop-shadow(0 0 12px rgba(191, 219, 254, 0.3));
+  margin-bottom: 1.5rem;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+
+/* Botão Fofo e Aconchegante */
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #ffffff;
+  font-family: 'Fredoka', cursive;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1.1rem 2.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cta-button:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(59, 130, 246, 0.5);
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+}
+
+/* ==========================================
+   Ilustrações dos Gatinhos (SVG) e Animações
+   ========================================== */
+.cat-decoration {
+  position: absolute;
+  user-select: none;
+  opacity: 0.85;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.cat-left {
+  left: 10%;
+  top: 40%;
+  animation: floatLeft 4s ease-in-out infinite;
+}
+
+.cat-right {
+  right: 10%;
+  top: 40%;
+  animation: floatRight 4.5s ease-in-out infinite;
+}
+
+@keyframes floatLeft {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+@keyframes floatRight {
+  0%, 100% { transform: translateY(0) rotate(4deg); }
+  50% { transform: translateY(-15px) rotate(-2deg); }
+}
+
+/* Brilhos Vetoriais de Fundo (Substituindo emojis de estrelas) */
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #bfdbfe, 0 0 20px #bfdbfe;
+  pointer-events: none;
+  animation: pulseSparkle 3s ease-in-out infinite alternate;
+}
+
+.sparkle-1 { top: 18%; left: 22%; animation-delay: 0s; }
+.sparkle-2 { top: 28%; left: 75%; animation-delay: 1s; }
+.sparkle-3 { top: 72%; left: 18%; animation-delay: 0.5s; }
+.sparkle-4 { top: 82%; left: 82%; animation-delay: 1.5s; }
+
+@keyframes pulseSparkle {
+  0% { transform: scale(0.6); opacity: 0.2; }
+  100% { transform: scale(1.4); opacity: 0.9; }
+}
+
+/* Adaptabilidade para Telas Menores */
+@media (max-width: 768px) {
+  .sparkle-title {
+    font-size: 2.2rem;
+  }
+  
+  .cat-decoration svg {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .cat-left { left: 3%; top: 18%; }
+  .cat-right { right: 3%; top: 18%; }
+}
+
+/* ==========================================
+   SEÇÃO DO CATÁLOGO DE LIVROS
+   ========================================== */
+.catalog-section {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 8% 6rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Fredoka', cursive;
+  font-size: 2.2rem;
+  text-align: center;
+  color: #e0f2fe;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 10px rgba(191, 219, 254, 0.4);
+}
+
+/* Grade Flexível de Cards */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+/* Estilo do Card Individual */
+.book-card {
+  background: rgba(13, 33, 62, 0.6);
+  border: 1px solid rgba(147, 197, 253, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(147, 197, 253, 0.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+/* Imagem de Capa do Livro */
+.book-cover {
+  width: 100%;
+  height: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover .book-cover img {
+  transform: scale(1.05);
+}
+
+/* Detalhes do Livro */
+.book-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.book-title {
+  font-family: 'Fredoka', cursive;
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.book-author {
+  font-size: 0.95rem;
+  color: #93c5fd;
+  margin-bottom: 1rem;
+}
+
+/* Etiquetas/Tags */
+.book-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+  margin-top: auto;
+}
+
+.badge {
+  background: rgba(59, 130, 246, 0.2);
+  color: #bfdbfe;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid rgba(191, 219, 254, 0.2);
+}
+
+/* Botão do Card */
+.swap-button {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  font-family: 'Fredoka', cursive;
+  font-size: 1rem;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.swap-button:hover {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
 }
