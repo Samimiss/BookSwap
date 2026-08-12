@@ -331,7 +331,7 @@ body {
 }
 
 .ajuda {
-  background-color: #0b1d3a;
+  background-image: linear-gradient( #2286c9,#0e5b96);
     padding: 80px 100px;
 }
 
@@ -411,23 +411,68 @@ body {
   padding: 10px;
 }
 
-footer{    
-    background-image: linear-gradient(#88c8fa);
+footer{
+    background-image: linear-gradient(#0e5b96, #2286c9);
+    color: #FFF;
+    padding: 10px;
 }
 
+
 .footer-container{
-    margin: 0 auto;
-    width: 100vw;
-    color: #FFF;
     display: flex;
+    max-width: 80vw;
+    margin: 0 auto;
+    justify-content: space-between;
 }
 
 .logo{
-  font
+    font-size: 35px;
+    font-weight: 500;
 }
+
+.footer-coluna p {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 
 .footer-coluna{
     display: flex;
     flex-direction: column;
-    font-size: 18px;
+    max-width: 28vw;
+}
+
+.footer-coluna ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 0;
+}
+ a{
+    text-decoration: none;
+    color: #FFF;
+ }
+
+
+ .footer-coluna h4{
+    color: var(--laranja-principal);
+ }
+
+
+ .footer-social{
+    padding: 15px;
+ }
+
+.footer-linha{
+    max-width: 70vw;
+    margin: 20px auto;
+    border: 1px solid var(--laranja-escurao);
+}
+
+.footer-copy{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 22px;
 }
