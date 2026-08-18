@@ -1,0 +1,449 @@
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background: #14264a;
+
+    color: #fff;
+
+    overflow-x: hidden;
+}
+
+
+/* ========================================
+   ESTRELAS
+======================================== */
+
+.star {
+    position: fixed;
+
+    width: 7px;
+    height: 7px;
+
+    background: #fff;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 12px 4px rgba(255, 255, 255, 0.35);
+
+    opacity: 0.8;
+
+    z-index: 1;
+}
+
+
+/* Posição das estrelas */
+
+.star:nth-child(1) {
+    top: 7%;
+    left: 2.5%;
+}
+
+.star:nth-child(2) {
+    top: 18%;
+    left: 22%;
+}
+
+.star:nth-child(3) {
+    top: 36%;
+    left: 10%;
+
+    width: 4px;
+    height: 4px;
+}
+
+.star:nth-child(4) {
+    top: 50%;
+    right: 5%;
+}
+
+.star:nth-child(5) {
+    top: 30%;
+    right: 16%;
+
+    width: 5px;
+    height: 5px;
+}
+
+.star:nth-child(6) {
+    bottom: 10%;
+    left: 48%;
+}
+
+.star:nth-child(7) {
+    bottom: 15%;
+    left: 18%;
+
+    width: 5px;
+    height: 5px;
+}
+
+.star:nth-child(8) {
+    bottom: 24%;
+    right: 15%;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    width: 100%;
+    height: 80px;
+
+    padding: 0 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+.logo {
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    letter-spacing: -1px;
+}
+
+/* Menu */
+
+nav {
+    display: flex;
+
+    gap: 30px;
+}
+
+
+nav a {
+    color: #b7c1df;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: #fff;
+}
+
+
+/* ========================================
+   PAINEL PRINCIPAL
+======================================== */
+
+main {
+    width: min(1070px, 90%);
+
+    min-height: 850px;
+
+    margin: 2px auto 40px;
+
+    background: rgba(34, 56, 96, 0.72);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 0 35px rgba(38, 109, 190, 0.13),
+        inset 0 1px 0 rgba(255, 255, 255, 0.02);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ========================================
+   CONTAINER DO CADASTRO
+======================================== */
+
+.cadastro-container {
+    width: 470px;
+
+    text-align: center;
+}
+
+
+/* Gatinho */
+
+.cat {
+    font-size: 65px;
+
+    line-height: 1;
+
+    margin-bottom: 18px;
+
+    filter:
+        grayscale(1)
+        brightness(1.8)
+        drop-shadow(
+            0 0 8px rgba(180, 205, 255, 0.45)
+        );
+}
+
+
+/* Título */
+
+h1 {
+    color: #d7cfff;
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+
+/* Subtítulo */
+
+.subtitulo {
+    color: #c1c9df;
+
+    font-size: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ========================================
+   CAIXA DO FORMULÁRIO
+======================================== */
+
+.form-box {
+    border: 1px solid rgba(151, 174, 220, 0.28);
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    background: rgba(34, 52, 91, 0.4);
+
+    text-align: left;
+}
+
+
+/* ========================================
+   CAMPOS
+======================================== */
+
+.campo {
+    margin-bottom: 18px;
+}
+
+
+.campo label {
+    display: block;
+
+    color: #f0f2fa;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+.campo input {
+    width: 100%;
+
+    height: 42px;
+
+    border: 1px solid #445780;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    padding: 0 14px;
+
+    background: #172647;
+
+    color: #fff;
+
+    font-size: 15px;
+
+    transition: 0.25s;
+}
+
+
+/* Placeholder */
+
+.campo input::placeholder {
+    color: #7886a8;
+}
+
+
+/* Campo selecionado */
+
+.campo input:focus {
+    border-color: #637ff0;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 127, 240, 0.12);
+}
+
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+.btn-cadastrar {
+    width: 100%;
+
+    height: 53px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: linear-gradient(
+        90deg,
+        #607dea,
+        #505ee4
+    );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    box-shadow:
+        0 10px 25px rgba(55, 77, 200, 0.25);
+}
+
+
+/* Efeito ao passar o mouse */
+
+.btn-cadastrar:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(55, 77, 200, 0.4);
+}
+
+
+/* Efeito ao clicar */
+
+.btn-cadastrar:active {
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   LINK DE LOGIN
+======================================== */
+
+.login {
+    margin-top: 20px;
+
+    color: #abb8d6;
+
+    font-size: 14px;
+}
+
+
+.login a {
+    color: #b9c5ff;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+
+    .logo {
+        width: 115px;
+    }
+
+
+    nav {
+        gap: 15px;
+    }
+
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    main {
+        width: 94%;
+
+        min-height: calc(100vh - 100px);
+
+        margin-top: 10px;
+    }
+
+
+    .cadastro-container {
+        width: 90%;
+    }
+
+
+    h1 {
+        font-size: 30px;
+    }
+
+
+    .form-box {
+        padding: 22px;
+    }
+
+}

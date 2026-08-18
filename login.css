@@ -1,0 +1,883 @@
+@import url(style.css);
+
+
+body{
+    background-image: linear-gradient(rgba(255, 141, 40, 20%), rgb(0, 75, 141, 20%) );
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 1142px;
+    height: 661px;
+    display: flex;
+    flex-direction: column ;
+    box-shadow: 0 0 25px #023e65;
+    border-radius: 10px;
+}
+
+.sessao-imagem{
+    width: 510px;
+    height: 661px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sessao-imagem img{
+    border-radius: 10px 0 0 10px;
+}
+
+.sessao-login{
+    height: 673px;
+    width: 620px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.area-titulo{
+    text-align: center;
+}
+
+.area-titulo h1, span{
+    font-size: 36px;
+    padding-bottom: 5px;
+}
+.area-titulo h1{
+    color: var(--azul-principal);
+    font-weight: 600;
+}
+
+.area-titulo h2{
+    font-size: 24px;
+    color: var(--azul-principal);
+    font-weight: 400;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 434px;
+    gap: 3px;
+}
+
+form input{
+    height: 35px;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+#email{
+    margin-bottom: 15px;
+}
+
+button{ 
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 18px;
+    background-image: linear-gradient( to right, rgba(0, 75, 141, 80%), rgba(255, 141, 40, 60%) );
+    border: none;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+form label{
+    color: var(--azul-principal);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.links-senha{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links-senha label {
+    position: relative;
+    right: 75px;
+}
+
+.links-senha label, input, a{
+    color: #2376ad;
+    font-weight: 400;
+}
+
+section a:hover{
+    color: #2376ad;
+    font-weight: 600;
+}
+
+
+#link-nao-conta{
+    text-align: center;
+}
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/* =========================
+   ESTRELAS
+========================= */
+
+.stars {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    opacity: 0.8;
+
+    box-shadow:
+        0 0 8px #fff,
+        0 0 18px rgba(180, 200, 255, 0.8);
+}
+
+
+/* POSIÇÕES DAS ESTRELAS */
+
+.star:nth-child(1) {
+    top: 8%;
+    left: 4%;
+
+    width: 7px;
+    height: 7px;
+}
+
+.star:nth-child(2) {
+    top: 19%;
+    left: 23%;
+
+    width: 6px;
+    height: 6px;
+}
+
+.star:nth-child(3) {
+    top: 27%;
+    left: 52%;
+
+    width: 7px;
+    height: 7px;
+}
+
+.star:nth-child(4) {
+    top: 42%;
+    right: 7%;
+
+    width: 6px;
+    height: 6px;
+}
+
+.star:nth-child(5) {
+    top: 68%;
+    left: 9%;
+
+    width: 5px;
+    height: 5px;
+}
+
+.star:nth-child(6) {
+    top: 74%;
+    right: 17%;
+
+    width: 6px;
+    height: 6px;
+}
+
+.star:nth-child(7) {
+    bottom: 8%;
+    left: 48%;
+
+    width: 6px;
+    height: 6px;
+}
+
+.star:nth-child(8) {
+    top: 36%;
+    left: 11%;
+
+    width: 3px;
+    height: 3px;
+
+    box-shadow: 0 0 5px #fff;
+}
+
+.star:nth-child(9) {
+    top: 58%;
+    right: 24%;
+
+    width: 3px;
+    height: 3px;
+}
+
+.star:nth-child(10) {
+    bottom: 24%;
+    left: 19%;
+
+    width: 4px;
+    height: 4px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding: 28px 4%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    letter-spacing: -1px;
+}
+/* MENU */
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    color: #aabce3;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.25s ease;
+}
+
+nav a:hover {
+    color: white;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    position: relative;
+
+    z-index: 1;
+
+    min-height: calc(100vh - 90px);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px 20px 80px;
+}
+
+
+/* CONTAINER */
+
+.login-container {
+    width: 100%;
+
+    text-align: center;
+
+}
+
+
+/* =========================
+   GATO
+========================= */
+
+.cat {
+    width: 100px;
+    height: 90px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(169, 200, 244, 0.25)
+        );
+}
+
+.cat svg {
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+}
+
+
+/* LINHAS DO GATO */
+
+.cat-line {
+    fill: none;
+
+    stroke: #a9c8f4;
+
+    stroke-width: 3.5;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* NARIZ */
+
+.cat-fill {
+    fill: #a9c8f4;
+}
+
+
+/* ANIMAÇÃO SUTIL */
+
+.cat {
+    animation: catFloat 4s ease-in-out infinite;
+}
+
+@keyframes catFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+h1 {
+    font-size: clamp(40px, 6vw, 58px);
+
+    line-height: 1.05;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #c9c9ff,
+            #ddd4ff,
+            #c7e0ff
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+
+    text-shadow:
+        0 0 20px
+        rgba(178, 182, 255, 0.12);
+
+    margin-bottom: 12px;
+  
+}
+
+
+/* SUBTÍTULO */
+
+.subtitle {
+    color: #c0cce4;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   CARD DE LOGIN
+========================= */
+
+.login-card {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 32px 34px;
+
+    background: rgba(29, 48, 86, 0.72);
+
+    border: 1px solid rgba(170, 193, 235, 0.18);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(8px);
+
+    
+    box-sizing: border-box;
+}
+
+
+.input-group {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 52px;
+    padding: 0 17px;
+    border: 1px solid rgba(168, 190, 231, 0.22)
+    border-radius: 14px;
+    outline: none;
+    color: white;
+    background: rgba(13, 27, 54, 0.58);
+    font-family: inherit;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: 0.25s ease;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.login-button {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: 56px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #507ff1,
+        #3f63e8
+    );
+
+    color: white;
+
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 900;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 10px 25px rgba(57, 94, 225, 0.28);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.input-group {
+    text-align: left;
+
+    margin-bottom: 18px;
+}
+
+
+/* LABEL */
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #cbd6ec;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* INPUT */
+
+input {
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 17px;
+
+    border:
+        1px solid
+        rgba(168, 190, 231, 0.22);
+
+    border-radius: 14px;
+
+    outline: none;
+
+    color: white;
+
+    background:
+        rgba(13, 27, 54, 0.58);
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    transition: 0.25s ease;
+}
+
+
+/* PLACEHOLDER */
+
+input::placeholder {
+    color: #7889ad;
+}
+
+
+/* FOCUS */
+
+input:focus {
+    border-color: #6389f3;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(80, 116, 237, 0.14),
+
+        0 0 20px
+        rgba(80, 116, 237, 0.12);
+}
+
+
+/* =========================
+   SENHA
+========================= */
+
+.password-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+/* ESQUECI SENHA */
+
+.forgot {
+    color: #91aff0;
+
+    font-size: 13px;
+
+    text-decoration: none;
+}
+
+.forgot:hover {
+    color: white;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.login-button {
+    width: 100%;
+
+    height: 56px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #507ff1,
+            #3f63e8
+        );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 17px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px
+        rgba(57, 94, 225, 0.28);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+/* HOVER */
+
+.login-button:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 14px 30px
+        rgba(57, 94, 225, 0.4);
+}
+
+
+/* CLICK */
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   CADASTRO
+========================= */
+
+.register {
+    margin-top: 22px;
+
+    color: #9baed2;
+
+    font-size: 14px;
+}
+
+.register a {
+    color: #aebfff;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.register a:hover {
+    color: white;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 650px) {
+
+    header {
+        padding: 24px 22px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main {
+        padding-top: 10px;
+    }
+
+    .login-card {
+        padding: 26px 22px;
+        width: 100%;
+        max-width: 430px;
+        padding: 32px 34px;
+        background: rgba(29, 48, 86, 0.72);
+        order: 1px solid rgba(170, 193, 235, 0.18);
+        border-radius: 24px;
+        box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+        box-sizing: border-box;
+}
+.input-group {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+input {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: 52px;
+
+    padding: 0 17px;
+
+    border: 1px solid rgba(168, 190, 231, 0.22);
+
+    border-radius: 14px;
+
+    outline: none;
+
+    color: white;
+
+    background: rgba(13, 27, 54, 0.58);
+
+    font-family: inherit;
+    font-size: 15px;
+
+    /* ESSENCIAL */
+    box-sizing: border-box;
+
+    transition: 0.25s ease;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.login-button {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: 56px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #507ff1,
+        #3f63e8
+    );
+
+    color: white;
+
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 900;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 10px 25px rgba(57, 94, 225, 0.28);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+
+@media (max-width: 430px) {
+
+    nav a:nth-child(-n+3) {
+        display: none;
+    }
+
+    .login-card {
+        border-radius: 20px;
+    }
+}
