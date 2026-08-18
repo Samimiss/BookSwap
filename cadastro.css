@@ -185,9 +185,9 @@ main {
 }
 
 
-/* ========================================
+/* 
    CONTAINER DO CADASTRO
-======================================== */
+*/
 
 .cadastro-container {
     width: 470px;
@@ -196,21 +196,68 @@ main {
 }
 
 
-/* Gatinho */
-
 .cat {
-    font-size: 65px;
+    width: 100px;
+    height: 90px;
 
-    line-height: 1;
+    margin: 0 auto 18px;
 
-    margin-bottom: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     filter:
-        grayscale(1)
-        brightness(1.8)
         drop-shadow(
-            0 0 8px rgba(180, 205, 255, 0.45)
+            0 0 8px
+            rgba(169, 200, 244, 0.25)
         );
+}
+
+.cat svg {
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+}
+
+
+/* LINHAS DO GATO */
+
+.cat-line {
+    fill: none;
+
+    stroke: #a9c8f4;
+
+    stroke-width: 3.5;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* NARIZ */
+
+.cat-fill {
+    fill: #a9c8f4;
+}
+
+
+/* ANIMAÇÃO SUTIL */
+
+.cat {
+    animation: catFloat 4s ease-in-out infinite;
+}
+
+@keyframes catFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
 }
 
 
@@ -238,9 +285,9 @@ h1 {
 }
 
 
-/* ========================================
+/* 
    CAIXA DO FORMULÁRIO
-======================================== */
+ */
 
 .form-box {
     border: 1px solid rgba(151, 174, 220, 0.28);
@@ -255,9 +302,9 @@ h1 {
 }
 
 
-/* ========================================
+/* 
    CAMPOS
-======================================== */
+ */
 
 .campo {
     margin-bottom: 18px;
