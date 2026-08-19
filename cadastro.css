@@ -117,17 +117,12 @@ header {
 }
 
 
-.logo {
-    font-family: "Fredoka", sans-serif;
-
-    font-size: 32px;
-    font-weight: 700;
-
-    color: #ffffff;
-
-    text-decoration: none;
-
-    letter-spacing: -1px;
+.logo-text {
+  font-family: 'Fredoka', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
 }
 
 /* Menu */
