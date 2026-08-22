@@ -33,11 +33,29 @@ input{
     height: 200px;
     background-color: rgb(243, 164, 226);
     margin: 20px auto;
+    box-shadow: 0 0 20px rgb(247, 43, 203);
+    border-radius: 22px;
  }
 
- .bnt{
+ .btn{
     padding: 5px 10px;
     margin-right:  10px;
  }
 
+.area_add_sub{
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    font-size: 22px;
+}
+.area_add_sub button{
+    padding: 5px;
+    background-color: rgb(245, 153, 210);
+    border: 1px solid rgb(rgb(253, 188, 244), green, blue);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
 
+.area_add_sub button:hover{
+    background-color: rgb(250, 18, 161);
+}
